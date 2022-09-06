@@ -42,7 +42,7 @@ attributes.headers.transactionId]]></ee:set-variable>
 		</choice>
 		<logger level="INFO" doc:name="Logger" doc:id="c7694792-52b3-43a6-8007-e293941168f4" message="Response Sent for TravelOnTip External System for TransactionId: #[vars.transactionId]"/>
 		<error-handler >
-			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="6924d2b7-d491-4bbb-8cc7-5340fe3c6586" >
+			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="6924d2b7-d491-4bbb-8cc7-5340fe3c6586" type="ANY">
 				<logger level="INFO" doc:name="Logger" doc:id="043de8c2-028d-4d7b-ba25-b957557990cf" message="Error Occure for TravelOnTip External System for TransactionId: #[vars.transactionId] reason: #[error.errorMessage] error Type: #[error.errorType]"/>
 				<ee:transform doc:name="Transform Message" doc:id="c20c89aa-a328-4ae3-8ea8-60163826631d" >
 					<ee:message >
